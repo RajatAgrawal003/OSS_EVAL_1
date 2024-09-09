@@ -1,0 +1,62 @@
+
+    
+    
+   
+
+
+movie_rental = []
+
+# add
+def add_item(item: str):
+    if item not in movie_rental:
+       movie_rental.append(item)
+        print(f"'{item}' has been added to the movie list.")
+    else:
+        print(f"'{item}' is already on the movie list.")
+
+        
+
+# Function to remove 
+def remove_item(item: str):
+    if item in movie_rental:
+        movie_rental.remove(item)
+        print(f"'{item}' has been removed from the movie list.")
+    else:
+        print(f"'{item}' is not on the movie list.")
+        
+#add customer details
+def add_item(item: str):
+    if item not in movie_rental:
+       movie_rental.append(item)
+        print(f"'{item}' has been added to customer list.")
+    else:
+        print(f"'{item}' is already on the customer list.")
+
+#  to search 
+def search_item(item: str) -> bool:
+    
+
+    if item in movie_rental:
+        print(f"'{item}' is on the movie list.")
+        return True
+    else:
+        print(f"'{item}' is not on the movie list.")
+        return False
+
+#  to display
+def display_list():
+    if movie_rental:
+        print("CURRENT DATA:")
+        for i, item in enumerate(movie_rental, 1):
+        print(f"{i}. {item}")
+    else:
+        print("The movie list is currently empty.")
+
+# Example usage
+if __name__ == "__main__":
+    add_item("Inception")
+    add_item("John Doe")
+    display_list()
+    search_item("Inception")
+    remove_item("John Doe")
+    display_list()
