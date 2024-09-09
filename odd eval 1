@@ -53,7 +53,6 @@ def display_list():
         print("The movie list is currently empty.")
 
 # Example usage
-if __name__ == "__main__":
     add_item("Inception")
     add_item("John Doe")
     display_list()
